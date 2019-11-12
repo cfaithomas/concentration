@@ -1,16 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <wait.h>
 #include <unistd.h>
 
-void clrscr();
 
 int main() {
     int delay = 0;
     int saisie=0;
     /****************************************Menu**********************************************************************/
-    printf("1-Facile (rappelez-vous 5 chiffres en 5 secondes)\n");
+    printf("1-Facile (rappelez-vous 5 chiffres en 10 secondes)\n");
     printf("2-Intermédiaire (rappelez-vous 5 chiffres en 5 secondes)\n");
     printf("3-Difficile (rappelez-vous 5 chiffres en 2 secondes)\n");
     printf("4-Arrêter le jeu\n");
@@ -40,7 +38,7 @@ int main() {
     n5= (rand() % (1000)) +1;
 
     printf("%d %d %d %d %d ",n1,n2,n3,n4,n5);
-    fflush(stdout);
+    fflush(stdout); //vide la derniere ligne de la console
     sleep(delay);
 
     /******************************Saisie de la serie******************************************************************/
@@ -69,9 +67,8 @@ int main() {
         }
 }
 
-void clrscr() {
-    system("@cls||clear");
-}
+
+
 
 
 
